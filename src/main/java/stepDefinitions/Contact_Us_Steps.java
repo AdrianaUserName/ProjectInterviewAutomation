@@ -23,6 +23,8 @@ public class Contact_Us_Steps {
         driver = new ChromeDriver(chromeOptions);
         driver.manage().window().maximize();
 
+        driver.quit();
+
     }
    @After
     public void tearDown(){
