@@ -33,24 +33,15 @@ public class Log_In_Steps {
 
     @Given("I access the webdriver Crossinx")
     public void i_access_the_webdriver_crossinx() throws InterruptedException {
-        driver.get("https://www.crossinx.com/en");
+        driver.get("https://crossnet4.crossinx.com/crossnet/en/trust/login");
         Thread.sleep(1000);
 
-        driver.findElement(By.xpath("//*[@id=\"onetrust-accept-btn-handler\"]")).click();
-        Thread.sleep(1000);
 
     }
 
-    @When("I click on the login button")
-    public void i_click_on_the_login_button() {
-      //  driver.findElement(By.xpath("//a[@id='login-button']//*[name()='svg']")).click();
-        driver.findElement(By.id("login-button")).click();
 
-        driver.switchTo().frame(0);
-    }
-
-    @And("I enter an incorrect first name")
-    public void i_enter_an_incorrect_first_name() throws InterruptedException {
+    @When("I enter an incorrect username")
+    public void i_enter_an_incorrect_username() throws InterruptedException {
        // driver.findElement(By.xpath("//input[@id='loginName']")).sendKeys("Klaus");
         driver.findElement(By.id("loginName")).sendKeys("Klaus");
         Thread.sleep(1000);
